@@ -24,13 +24,13 @@ new Chart('topChart', {
         maintainAspectRatio: false,
         scales: {
 
-
-
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
             r: {
-                min: -1,
+                suggestedMin: 0,
+                suggestedMax: 4,
+                min: 0,
                 max: 4,
                 beginAtZero: true,
                 angleLines: {
@@ -80,19 +80,26 @@ new Chart('jungleChart', {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-            r: {
 
-                pointLabels: {
-                    display: true // Hides the labels around the radar chart 
+            pointLabels: {
+                display: true // Hides the labels around the radar chart 
+            },
+            r: {
+                suggestedMin: 0,
+                suggestedMax: 4,
+                min: 0,
+                max: 4,
+                beginAtZero: true,
+                angleLines: {
+                    display: false
                 },
                 ticks: {
-                    display: false, // Hides the labels in the middel (numbers)
-                    beginAtZero: true,
-                    max: 4,
-                    min: 0,
-                    stepSize: 1
+                    display: false,
+                    stepSize: 1,
+
                 }
             }
+
         },
 
         legend: {
@@ -134,19 +141,26 @@ new Chart('midChart', {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-            r: {
 
-                pointLabels: {
-                    display: true // Hides the labels around the radar chart 
+            pointLabels: {
+                display: true // Hides the labels around the radar chart 
+            },
+            r: {
+                suggestedMin: 0,
+                suggestedMax: 4,
+                min: 0,
+                max: 4,
+                beginAtZero: true,
+                angleLines: {
+                    display: false
                 },
                 ticks: {
-                    display: false, // Hides the labels in the middel (numbers)
-                    beginAtZero: true,
-                    max: 4,
-                    min: 0,
-                    stepSize: 1
+                    display: false,
+                    stepSize: 1,
+
                 }
             }
+
         },
         legend: {
             display: false
@@ -193,13 +207,22 @@ new Chart('onedealChart', {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
-            ticks: {
-                display: false, // Hides the labels in the middel (numbers)
-                beginAtZero: true,
-                max: 4,
+            r: {
+                suggestedMin: 0,
+                suggestedMax: 4,
                 min: 0,
-                stepSize: 1
+                max: 4,
+                beginAtZero: true,
+                angleLines: {
+                    display: false
+                },
+                ticks: {
+                    display: false,
+                    stepSize: 1,
+
+                }
             }
+
         },
         legend: {
             display: false
@@ -238,19 +261,26 @@ new Chart('supporterChart', {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-            r: {
 
-                pointLabels: {
-                    display: true // Hides the labels around the radar chart 
+            pointLabels: {
+                display: true // Hides the labels around the radar chart 
+            },
+            r: {
+                suggestedMin: 0,
+                suggestedMax: 4,
+                min: 0,
+                max: 4,
+                beginAtZero: true,
+                angleLines: {
+                    display: false
                 },
                 ticks: {
-                    display: false, // Hides the labels in the middel (numbers)
-                    beginAtZero: true,
-                    max: 4,
-                    min: 0,
-                    stepSize: 1
+                    display: false,
+                    stepSize: 1,
+
                 }
             }
+
         },
         legend: {
             display: false
