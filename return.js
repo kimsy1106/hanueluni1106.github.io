@@ -64,10 +64,26 @@ new Chart('topChart', {
         responsive: false,
         maintainAspectRatio: true,
         scale: {
+            pointLabels: {
+                display: true // Hides the labels around the radar chart 
+            },
+
+            angleLines: {
+                display: false
+            },
             ticks: {
                 beginAtZero: true,
                 max: 5,
                 stepSize: 1
+            }
+        },
+        legend: {
+            display: false
+        },
+        plugins: {
+
+            legend: {
+                display: false
             }
         }
     }
@@ -95,10 +111,9 @@ new Chart('jungleChart', {
         ]
     },
     options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-
+        responsive: false,
+        maintainAspectRatio: true,
+        scale: {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
@@ -107,12 +122,10 @@ new Chart('jungleChart', {
                 display: false
             },
             ticks: {
-                display: false,
-                suggestedMin: 0,
-                suggestedMax: 4,
+                beginAtZero: true,
+                max: 5,
                 stepSize: 1
             }
-
         },
         legend: {
             display: false
@@ -150,34 +163,27 @@ new Chart('midChart', {
         ]
     },
     options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-
+        responsive: false,
+        maintainAspectRatio: true,
+        scale: {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
-            r: {
-                suggestedMin: 0,
-                suggestedMax: 4,
-                min: 0,
-                max: 4,
+
+            angleLines: {
+                display: false
+            },
+            ticks: {
                 beginAtZero: true,
-                angleLines: {
-                    display: false
-                },
-                ticks: {
-                    display: false,
-                    stepSize: 1,
-
-                }
+                max: 5,
+                stepSize: 1
             }
-
         },
         legend: {
             display: false
         },
         plugins: {
+
             legend: {
                 display: false
             }
@@ -212,34 +218,27 @@ new Chart('onedealChart', {
         ]
     },
     options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-
+        responsive: false,
+        maintainAspectRatio: true,
+        scale: {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
-            r: {
-                suggestedMin: 0,
-                suggestedMax: 4,
-                min: 0,
-                max: 4,
+
+            angleLines: {
+                display: false
+            },
+            ticks: {
                 beginAtZero: true,
-                angleLines: {
-                    display: false
-                },
-                ticks: {
-                    display: false,
-                    stepSize: 1,
-
-                }
+                max: 5,
+                stepSize: 1
             }
-
         },
         legend: {
             display: false
         },
         plugins: {
+
             legend: {
                 display: false
             }
@@ -270,34 +269,27 @@ new Chart('supporterChart', {
         ]
     },
     options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-
+        responsive: false,
+        maintainAspectRatio: true,
+        scale: {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
-            r: {
-                suggestedMin: 0,
-                suggestedMax: 4,
-                min: 0,
-                max: 4,
+
+            angleLines: {
+                display: false
+            },
+            ticks: {
                 beginAtZero: true,
-                angleLines: {
-                    display: false
-                },
-                ticks: {
-                    display: false,
-                    stepSize: 1,
-
-                }
+                max: 5,
+                stepSize: 1
             }
-
         },
         legend: {
             display: false
         },
         plugins: {
+
             legend: {
                 display: false
             }
