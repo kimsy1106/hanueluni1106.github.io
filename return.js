@@ -27,20 +27,19 @@ new Chart('topChart', {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
-            r: {
-                suggestedMin: 0,
-                suggestedMax: 4,
-                min: 0,
-                max: 4,
-                beginAtZero: true,
-                angleLines: {
-                    display: false
-                },
+            yAxes: [{
                 ticks: {
-                    display: false,
-                    stepSize: 1,
-
+                    max: 4,
+                    min: 0,
+                    stepSize: 1
                 }
+            }],
+            angleLines: {
+                display: false
+            },
+            ticks: {
+                display: false,
+
             }
 
         },
@@ -84,12 +83,14 @@ new Chart('jungleChart', {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
+            yAxes: [{
+                ticks: {
+                    max: 4,
+                    min: 0,
+                    stepSize: 1
+                }
+            }],
             r: {
-                suggestedMin: 0,
-                suggestedMax: 4,
-                min: 0,
-                max: 4,
-                beginAtZero: true,
                 angleLines: {
                     display: false
                 },
