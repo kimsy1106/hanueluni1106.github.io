@@ -1,8 +1,56 @@
+import FusionCharts from 'fusioncharts/core';
+import Column2D from 'fusioncharts/viz/column2d';
+import FusionTheme from 'fusioncharts/themes/es/fusioncharts.theme.fusion';
+FusionCharts.addDep(Column2D);
+FusionCharts.addDep(FusionTheme);
+
+
 var scores = document.getElementById('scores').innerHTML.split(' ');
 //context = document.getElementById('topChart').getContext('2d');
 //var max = Math.max(scores[0], scores[1], scores[2], scores[3], scores[4]);
 //var min = Math.min(scores[0], scores[1], scores[2], scores[3], scores[4]);
 
+const chartData = [{
+    "label": "한타",
+    "value": 1
+}, {
+    "label": "시야",
+    "value": 1.3
+}, {
+    "label": "라인전",
+    "value": 2
+}, {
+    "label": "이니시",
+    "value": 0.2
+}, {
+    "label": "생존",
+    "value": 4
+}];
+
+const chartConfig = {
+    type: 'radar',
+    renderAt: 'topChart',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "yAxisMaxValue": "4",
+            "yAxisMinValue": "0",
+            "caption": "5 radar chart",
+            "subCaption": "Current month",
+            "numberPrefix": "$",
+            "theme": "fusion"
+        },
+        "data": chartData
+    }
+}
+FusionCharts.ready(function () {
+    var fusioncharts = new FusionCharts(chartConfig);
+    fusioncharts.render();
+});
+
+
+
+/*
 new Chart('topChart', {
     type: 'radar',
     data: {
@@ -49,7 +97,7 @@ new Chart('topChart', {
         }
     }
 });
-
+*/
 
 
 //context = document.getElementById('jungleChart').getContext('2d');
