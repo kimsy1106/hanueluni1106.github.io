@@ -27,19 +27,15 @@ new Chart('topChart', {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
-            yAxes: [{
-                ticks: {
-                    max: 4,
-                    min: 0,
-                    stepSize: 1
-                }
-            }],
+
             angleLines: {
                 display: false
             },
             ticks: {
                 display: false,
-
+                suggestedMin: 0,
+                suggestedMax: 4,
+                stepSize: 1
             }
 
         },
