@@ -43,7 +43,7 @@ FusionCharts.ready(function () {
 
 */
 
-/*
+
 new Chart('topChart', {
     type: 'radar',
     data: {
@@ -61,36 +61,18 @@ new Chart('topChart', {
         ]
     },
     options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-
-            pointLabels: {
-                display: true // Hides the labels around the radar chart 
-            },
-
-            angleLines: {
-                display: false
-            },
+        responsive: false,
+        maintainAspectRatio: true,
+        scale: {
             ticks: {
-                display: false,
-                suggestedMin: 0,
-                suggestedMax: 4,
+                beginAtZero: true,
+                max: 5,
                 stepSize: 1
-            }
-
-        },
-        legend: {
-            display: false
-        },
-        plugins: {
-            legend: {
-                display: false
             }
         }
     }
 });
-*/
+
 
 
 //context = document.getElementById('jungleChart').getContext('2d');
