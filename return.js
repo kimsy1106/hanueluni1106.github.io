@@ -1,15 +1,8 @@
-import FusionCharts from 'fusioncharts/core';
-import Column2D from 'fusioncharts/viz/column2d';
-import FusionTheme from 'fusioncharts/themes/es/fusioncharts.theme.fusion';
-FusionCharts.addDep(Column2D);
-FusionCharts.addDep(FusionTheme);
-
-
 var scores = document.getElementById('scores').innerHTML.split(' ');
 //context = document.getElementById('topChart').getContext('2d');
 //var max = Math.max(scores[0], scores[1], scores[2], scores[3], scores[4]);
 //var min = Math.min(scores[0], scores[1], scores[2], scores[3], scores[4]);
-
+/*
 const chartData = [{
     "label": "한타",
     "value": 1
@@ -48,7 +41,7 @@ FusionCharts.ready(function () {
     fusioncharts.render();
 });
 
-
+*/
 
 /*
 new Chart('topChart', {
