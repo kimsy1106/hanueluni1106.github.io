@@ -25,15 +25,22 @@ new Chart('topChart', {
         scales: {
 
 
+
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
             },
-            ticks: {
-                display: true, // Hides the labels in the middel (numbers)
-                beginAtZero: true,
+            r: {
+                min: -1,
                 max: 4,
-                min: 0,
-                stepSize: 1
+                beginAtZero: true,
+                angleLines: {
+                    display: false
+                },
+                ticks: {
+                    display: false,
+                    stepSize: 1,
+
+                }
             }
 
         },
