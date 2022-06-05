@@ -48,12 +48,30 @@ FusionCharts.ready(function () {
 });
 
 */
-
+function getABC(score) {
+    if (score >= 4.0) {
+        return "A"
+    } else if (score >= 3.5) {
+        return "B+"
+    } else if (score >= 3.0) {
+        return "B"
+    } else if (score >= 2.5) {
+        return "C+"
+    } else if (score >= 2.0) {
+        return "C"
+    } else if (score >= 1.5) {
+        return "D+"
+    } else if (score >= 1.0) {
+        return "D"
+    } else {
+        return "F"
+    }
+}
 
 new Chart('topChart', {
     type: 'radar',
     data: {
-        labels: ["한타", "시야", "라인전", "이니시", "생존"],
+        labels: ["한타\n" + getABC(scores[0] * 4).toString(), "시야\n" + getABC(scores[1] * 4).toString(), "라인전\n" + getABC(scores[2] * 4).toString(), "이니시\n" + getABC(scores[3] * 4).toString(), "생존\n" + getABC(scores[4] * 4).toString()],
         datasets: [
             {
                 fill: true,
