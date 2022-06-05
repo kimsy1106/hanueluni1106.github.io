@@ -1,4 +1,4 @@
-import ChartDataLabels from 'chartjs-plugin-datalabels';
+import ChartDataLabels from './chartjs-plugin-datalabels';
 Chart.plugins.unregister(ChartDataLabels);
 Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
     color: '#FE777B'
