@@ -1,3 +1,9 @@
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+Chart.plugins.unregister(ChartDataLabels);
+Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
+    color: '#FE777B'
+});
+
 var scores = document.getElementById('scores').innerHTML.split(' ');
 //context = document.getElementById('topChart').getContext('2d');
 //var max = Math.max(scores[0], scores[1], scores[2], scores[3], scores[4]);
@@ -46,6 +52,7 @@ FusionCharts.ready(function () {
 
 new Chart('topChart', {
     type: 'radar',
+    plugins: [ChartDataLabels],
     data: {
         labels: ["한타", "시야", "라인전", "이니시", "생존"],
         datasets: [
@@ -60,9 +67,21 @@ new Chart('topChart', {
             }
         ]
     },
+    datalabels: {
+        color: 'black',
+        font: { size: 24 }
+    },
     options: {
         responsive: false,
         maintainAspectRatio: true,
+        plugins: {
+            datalabels: {
+                formatter: function (value, context) {
+                    var idx = context.dataIndex;
+                    return context.chart.data.labels[idx] + ' ' + addComma(value) + (idx == 0 ? '점' : 'P');
+                }
+            }
+        },
         scale: {
             pointLabels: {
                 display: true // Hides the labels around the radar chart 
@@ -74,7 +93,8 @@ new Chart('topChart', {
             ticks: {
                 beginAtZero: true,
                 max: 5,
-                stepSize: 1
+                stepSize: 1,
+                display: false
             }
         },
         legend: {
@@ -124,7 +144,8 @@ new Chart('jungleChart', {
             ticks: {
                 beginAtZero: true,
                 max: 5,
-                stepSize: 1
+                stepSize: 1,
+                display: false
             }
         },
         legend: {
