@@ -184,7 +184,8 @@ new Chart('midChart', {
             ticks: {
                 beginAtZero: true,
                 max: 5,
-                stepSize: 1
+                stepSize: 1,
+                display: false
             }
         },
         legend: {
@@ -239,7 +240,8 @@ new Chart('onedealChart', {
             ticks: {
                 beginAtZero: true,
                 max: 5,
-                stepSize: 1
+                stepSize: 1,
+                display: false
             }
         },
         legend: {
@@ -290,7 +292,8 @@ new Chart('supporterChart', {
             ticks: {
                 beginAtZero: true,
                 max: 5,
-                stepSize: 1
+                stepSize: 1,
+                display: false
             }
         },
         legend: {
