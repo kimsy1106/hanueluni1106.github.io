@@ -71,7 +71,7 @@ function getABC(score) {
 new Chart('topChart', {
     type: 'radar',
     data: {
-        labels: ["한타\n" + getABC(scores[0] * 4).toString(), "시야\n" + getABC(scores[1] * 4).toString(), "라인전\n" + getABC(scores[2] * 4).toString(), "이니시\n" + getABC(scores[3] * 4).toString(), "생존\n" + getABC(scores[4] * 4).toString()],
+        labels: [[getABC(scores[0] * 4).toString().bold(), getABC(scores[1] * 4).toString().bold(), getABC(scores[2] * 4).toString().bold(), getABC(scores[3] * 4).toString().bold(), getABC(scores[4] * 4).toString().bold()], ["한타", "시야", "라인전", "이니시", "생존"]],
         datasets: [
             {
                 fill: true,
